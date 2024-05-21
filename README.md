@@ -1,24 +1,32 @@
-🃏 Joke Fetcher Script
-This repository contains scripts in Bash to fetch jokes from the icanhazdadjoke API based on user-defined search terms. The scripts fetch a new set of jokes every 15 seconds for 1 minute, displaying each joke individually.
+# 🃏 Joke Fetcher Script
 
-📜 Problem Statement
+This repository contains scripts in *Bash* to fetch jokes from the [icanhazdadjoke](https://icanhazdadjoke.com/api) API based on user-defined search terms. The scripts fetch a new set of jokes every 15 seconds for 1 minute, displaying each joke individually.
+
+## 📜 Problem Statement
+
 Write a script to call the https://icanhazdadjoke.com/api endpoint for a new set of jokes every 15 seconds for 1 minute. The script should:
+- Accept user input for a search term and the number of jokes in a set.
+- Provide each joke in the set individually, not all at once.
 
-Accept user input for a search term and the number of jokes in a set.
-Provide each joke in the set individually, not all at once.
-Example
-Fetch 3 jokes with the search term 'snow'.
+### Example
+> Fetch 3 jokes with the search term 'snow'.
 
-💡 Solution Overview
-Features
-Accept user input for a search term and number of jokes.
-Make API requests to fetch jokes based on the search term.
-Display each joke individually with a 15-second delay between sets.
-Run the entire process for 1 minute.
-Languages
-Bash
-🐚 Bash Script Solution
-Script
+## 💡 Solution Overview
+
+### Features
+- Accept user input for a search term and number of jokes.
+- Make API requests to fetch jokes based on the search term.
+- Display each joke individually with a 15-second delay between sets.
+- Run the entire process for 1 minute.
+
+### Languages
+- [Bash](#bash-script-solution)
+
+## 🐚 Bash Script Solution
+
+### Script
+
+```bash
 #!/bin/bash
 
 # Function to fetch jokes
