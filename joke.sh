@@ -15,7 +15,7 @@ fetch_jokes() {
     clear  # Clear the terminal before showing new set of jokes
     for ((j=0; j<num_jokes; j++))
     do
-      joke=$(curl -k -s "https://icanhazdadjoke.com/search?term=${search_term}" -H "Accept: application/json" | jq -r ".results[$j].joke")
+      joke=$(curl -s "https://icanhazdadjoke.com/search?term=${search_term}" -H "Accept: application/json" | jq -r ".results[$j].joke")
       echo "Joke $((j+1)): $joke"
     done
     sleep $interval
