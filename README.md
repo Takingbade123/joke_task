@@ -35,12 +35,13 @@ fetch_jokes() {
   num_jokes=$2
   interval=$3
   total_duration=$4
-  
+
   # Calculate the total number of requests based on duration and interval
   total_requests=$((total_duration / interval))
-  
+
   for ((i=0; i<total_requests; i++))
   do
+    clear  # Clear the terminal before showing new set of jokes
     for ((j=0; j<num_jokes; j++))
     do
       joke=$(curl -s "https://icanhazdadjoke.com/search?term=${search_term}" -H "Accept: application/json" | jq -r ".results[$j].joke")
