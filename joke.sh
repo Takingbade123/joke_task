@@ -14,6 +14,7 @@ fetch_jokes() {
   do
     clear  # Clear the terminal before showing new set of jokes
     echo "Fetching joke set $((i+1)) of $total_requests"
+    clear  # Clear the terminal before showing new set of jokes
     for ((j=0; j<num_jokes; j++))
     do
       joke=$(curl -s "https://icanhazdadjoke.com/search?term=${search_term}" -H "Accept: application/json" | jq -r ".results[$j].joke")
